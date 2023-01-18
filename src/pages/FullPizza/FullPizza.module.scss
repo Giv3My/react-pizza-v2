@@ -1,0 +1,77 @@
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+
+  & .wrapper {
+    margin-top: 40px;
+    display: flex;
+    gap: 0 20px;
+
+    @media (max-width: 905px) {
+      flex-direction: column-reverse;
+      align-items: center;
+
+      & .pizza-img {
+        margin-top: 40px;
+      }
+    }
+
+    & .pizza-img {
+      img {
+        width: 450px;
+        height: 450px;
+
+        @media (max-width: 905px) {
+          width: 350px;
+          height: 350px;
+        }
+
+        @media (max-width: 420px) {
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
+
+    & .pizza-info {
+      & .pizza-title {
+        display: flex;
+        align-items: center;
+
+        h2 {
+          font-size: 36px;
+          font-weight: 700;
+        }
+
+        p {
+          margin: 0 5px 0 10px;
+          font-size: 24px;
+          font-weight: 700;
+          color: #ffbf43;
+        }
+      }
+
+      h4 {
+        margin-top: 20px;
+        font-size: 26px;
+        font-weight: 600;
+      }
+
+      @media (max-width: 420px) {
+        & .pizza-title {
+          h2 {
+            font-size: 28px;
+          }
+
+          p {
+            font-size: 18px;
+          }
+        }
+
+        h4 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
